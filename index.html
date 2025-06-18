@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ระบบส่งใบลา</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>📄 ระบบส่งใบลา</h1>
+      <nav>
+        <a href="#form" class="active">ส่งใบลา</a>
+        <a href="#about">เกี่ยวกับ</a>
+      </nav>
+      <button id="logoutBtn" style="display:none;">🚪 ออกจากระบบ</button>
+    </header>
+
+    <main>
+      <section id="login">
+        <h2>เข้าสู่ระบบ</h2>
+        <form id="loginForm">
+          <input id="email" type="email" placeholder="อีเมล" required />
+          <input id="password" type="password" placeholder="รหัสผ่าน" required />
+          <button type="submit">🔓 เข้าสู่ระบบ</button>
+        </form>
+      </section>
+
+      <section id="form" style="display:none;">
+        <h2>ฟอร์มส่งใบลา</h2>
+        <form id="leaveForm">
+          <input id="name" placeholder="ชื่อ-นามสกุล" required />
+          <select id="type" required>
+            <option value="">-- ประเภทการลา --</option>
+            <option value="ลาป่วย">ลาป่วย</option>
+            <option value="ลากิจ">ลากิจ</option>
+            <option value="ลาพักร้อน">ลาพักร้อน</option>
+          </select>
+          <input id="date" type="date" required />
+          <textarea id="reason" placeholder="เหตุผล" required></textarea>
+          <button type="submit">📤 ส่งใบลา</button>
+        </form>
+      </section>
+
+      <section id="about" style="display:none;">
+        <h2>เกี่ยวกับระบบ</h2>
+        <p>ระบบส่งใบลาแบบเรียบง่าย เชื่อมกับ Firebase Firestore</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 ระบบส่งใบลา | ทำเพื่อการศึกษา</p>
+    </footer>
+  </body>
+</html>
